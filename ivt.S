@@ -1,0 +1,20 @@
+.extern _ZN5Riscv15supervisorTrap1Ev
+.extern _ZN5Riscv15supervisorTrap2Ev
+.extern _ZN5Riscv15supervisorTrap3Ev
+
+.align 4
+.global _ZN5Riscv3ivtEv
+.type _ZN5Riscv3ivtEv, @function
+_ZN5Riscv3ivtEv:
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap2Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap3Ev
+j _ZN5Riscv15supervisorTrap1Ev
+j _ZN5Riscv15supervisorTrap1Ev
