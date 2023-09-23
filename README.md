@@ -1,7 +1,7 @@
 # Operating-Systems-1-Project
 A small but fully functional kernel of a multithreaded operating system with time sharing, written for RISC V architecture using assembly and C/C++. Includes a memory allocator, threads, semaphores and preemption on timer and keyboard interrupts.
 The user application and the kernel use the same address space, as together they make a static program in the operating memory. The kernel was developed in a virtual machine based on Linux.
-These are the implemeneted system calls:
+These are the implemeneted system calls (C layer):
 - void* mem_alloc (size_t size)
 - int mem_free (void*)
 - int thread_create (thread_t* handle, void(*start-routine)(void*), void* arg)
@@ -15,6 +15,8 @@ These are the implemeneted system calls:
 - int time_sleep (time_t)
 - char getc ()
 - void putc (char)
+
+The C++ interface is given in the file syscall_cpp.hpp.
 
 The user application should be written in function void userMain().
 
