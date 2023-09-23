@@ -1,6 +1,6 @@
 # Operating-Systems-1-Project
-A small kernel of a multithreaded operating system with time sharing, written for RISC V architecture using assembly and C/C++. Includes a memory allocator, threads, semaphores and preemption on timer and keyboard interrupts.
-The user application and the kernel use the same address space, as together they make a static program in the operating memory.
+A small but fully functional kernel of a multithreaded operating system with time sharing, written for RISC V architecture using assembly and C/C++. Includes a memory allocator, threads, semaphores and preemption on timer and keyboard interrupts.
+The user application and the kernel use the same address space, as together they make a static program in the operating memory. The kernel was developed in a virtual machine based on Linux.
 These are the implemeneted system calls:
 - void* mem_alloc (size_t size)
 - int mem_free (void*)
@@ -17,3 +17,9 @@ These are the implemeneted system calls:
 - void putc (char)
 
 The user application should be written in function void userMain().
+
+The files in the tests folder are not written by me and were used for testing and evaluating the features.
+
+The full text of the project requierements and explanations in Serbian is given in the file Projektni zadatak 2023.
+
+Feel free to contact me for any questions or if you would like any detailed explanations.
