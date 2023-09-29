@@ -6,8 +6,6 @@
 
 
 int Buffer::append(char c) {
-
-    if(numOfElems == BufferSize) return -1; //bafer pun, znakovi se odbacuju
     buffer[tail] = c;
     tail = (tail + 1) % BufferSize;
     numOfElems++;
