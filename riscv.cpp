@@ -172,7 +172,9 @@ void Riscv::handleSupervisorTrap1() {
         char data;
         __asm__ volatile("ld %[variable], 88(s0)" : [variable] "=r" (data)); //citanje argumenta
 
-        if(!K_Console::ConsoleObj().outputBuffer->append(data))  K_Console::ConsoleObj().outputItemAvailable->signal();
+        K_Console::ConsoleObj().outputSpaceAvailable->wait();
+        K_Console::ConsoleObj().outputBuffer->append(data);
+        K_Console::ConsoleObj().outputItemAvailable->signal();
     }
 
         w_sstatus(sstatus);
@@ -210,7 +212,8 @@ void Riscv::handleSupervisorTrap3() {
         //citanje podataka
         while((*(char*)CONSOLE_STATUS) & CONSOLE_RX_STATUS_BIT) {
             char data = *(char *) CONSOLE_RX_DATA;
-            if(!K_Console::ConsoleObj().inputBuffer->append(data)) K_Console::ConsoleObj().inputItemAvailable->signal();
+            K_Console::ConsoleObj().inputBuffer->append(data);
+            K_Console::ConsoleObj().inputItemAvailable->signal();
         }
     }
 
