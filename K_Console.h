@@ -18,6 +18,7 @@ public:
 
     K_Semaphore* outputItemAvailable;
     K_Semaphore* inputItemAvailable;
+    K_Semaphore* outputSpaceAvailable;
 
     Buffer* outputBuffer;
     Buffer* inputBuffer;
