@@ -23,5 +23,3 @@ The user application should be written in function void userMain().
 The files in the tests folder are not written by me and were used for testing and evaluating the features.
 
 The full text of the project requierements and explanations in Serbian is given in the file Projektni zadatak 2023.
-
-Feel free to contact me for any questions or if you would like any detailed explanations.
